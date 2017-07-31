@@ -39,8 +39,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1645957364679472}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12, y: 3, z: -8}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.6399999, y: 2, z: -9.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -128,9 +128,10 @@ MonoBehaviour:
   damageOnCollision: 1
   continuousDamage: 0
   continuousTimeBetweenHits: 0
-  destroySelfOnImpact: 0
+  destroySelfOnImpact: 1
   delayBeforeDestroy: 0
-  explosionPrefab: {fileID: 0}
+  explosionPrefab: {fileID: 1342473350944964, guid: 3bd14920f2902459897c930466d6c586,
+    type: 2}
 --- !u!114 &114779315120552556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,7 +147,8 @@ MonoBehaviour:
   respawnHealthPoints: 1
   numberOfLives: 1
   isAlive: 1
-  explosionPrefab: {fileID: 0}
+  explosionPrefab: {fileID: 1342473350944964, guid: 3bd14920f2902459897c930466d6c586,
+    type: 2}
   onLivesGone: 1
   LevelToLoad: 
 --- !u!114 &114994810358385320
