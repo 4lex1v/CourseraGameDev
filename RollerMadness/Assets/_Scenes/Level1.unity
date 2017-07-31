@@ -173,8 +173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72efb9e0cf1734f0988c6069f6220681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 1
-  respawnHealthPoints: 1
+  healthPoints: 10
+  respawnHealthPoints: 10
   numberOfLives: 1
   isAlive: 1
   explosionPrefab: {fileID: 0}
@@ -648,6 +648,14 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212912394039950, guid: e3b9b735c71fb4eae9d809008f472b56, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212912394039950, guid: e3b9b735c71fb4eae9d809008f472b56, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3b9b735c71fb4eae9d809008f472b56, type: 2}
