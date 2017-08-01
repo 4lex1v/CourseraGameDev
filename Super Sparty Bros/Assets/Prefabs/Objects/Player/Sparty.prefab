@@ -11,6 +11,21 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1519564497180290}
   m_IsPrefabParent: 1
+--- !u!1 &1216952216564938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4157042674161110}
+  m_Layer: 8
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1519564497180290
 GameObject:
   m_ObjectHideFlags: 0
@@ -25,6 +40,7 @@ GameObject:
   - component: {fileID: 61627389313800966}
   - component: {fileID: 82298460587851884}
   - component: {fileID: 95844324020534042}
+  - component: {fileID: 114683309884580252}
   m_Layer: 8
   m_Name: Sparty
   m_TagString: Player
@@ -32,6 +48,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4157042674161110
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1216952216564938}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.539, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4241405048341652}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4241405048341652
 Transform:
   m_ObjectHideFlags: 1
@@ -39,9 +68,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1519564497180290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0696888, y: -2.628, z: 0}
+  m_LocalPosition: {x: -2.0696888, y: -2.763, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4157042674161110}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -202,6 +232,30 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114683309884580252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1519564497180290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e36f6181ed5f2473c8a68abe635767ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+  jumpForce: 600
+  playerHealth: 1
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 1536
+  groundCheck: {fileID: 4157042674161110}
+  playerCanMove: 1
+  coinSFX: {fileID: 8300000, guid: b5ecae30fe7df44c39cbc13945866b94, type: 3}
+  deathSFX: {fileID: 8300000, guid: 14ce393736cdf4d9eb3ea47417cffdc8, type: 3}
+  fallSFX: {fileID: 8300000, guid: c85904f5278fa456f8b62926807a73b2, type: 3}
+  jumpSFX: {fileID: 8300000, guid: 5c891e0afc5c24efc985a371e5a3b06e, type: 3}
+  victorySFX: {fileID: 8300000, guid: 04e87fe174e534928b06163045c28130, type: 3}
 --- !u!212 &212031048340295880
 SpriteRenderer:
   m_ObjectHideFlags: 1
