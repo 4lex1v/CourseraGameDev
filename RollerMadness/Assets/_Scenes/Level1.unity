@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 600711138}
   - component: {fileID: 600711137}
   m_Layer: 5
-  m_Name: EndGame Text
+  m_Name: Victory Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1527,7 +1527,7 @@ MonoBehaviour:
   gameState: 0
   score: 0
   canBeatLevel: 1
-  beatLevelScore: 3
+  beatLevelScore: 1
   mainCanvas: {fileID: 2075451436}
   mainScoreDisplay: {fileID: 2079387084}
   gameOverCanvas: {fileID: 102656380}
@@ -1894,7 +1894,7 @@ GameObject:
   - component: {fileID: 1627755946}
   - component: {fileID: 1627755945}
   m_Layer: 5
-  m_Name: PlayAgain Button
+  m_Name: NextLevel Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1930,7 +1930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64f8043d604074445a91b7d76ee56a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelToLoad: Level1
+  LevelToLoad: Level2
 --- !u!114 &1627755946
 MonoBehaviour:
   m_ObjectHideFlags: 0
