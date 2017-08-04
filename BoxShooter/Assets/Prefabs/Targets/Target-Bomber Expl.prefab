@@ -52,7 +52,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2e5bb393359494640b4d8676468a9e6a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 005cd5d25f194495ebf905570572a4af, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3417,7 +3417,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 907a16b652c544935b5ceacc1bdaefa4, type: 2}
+  - {fileID: 2100000, guid: 6e2c245da2100476796411cad6f23a88, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
