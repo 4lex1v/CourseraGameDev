@@ -2,7 +2,6 @@
 using System.Collections;
 using UnityEngine.UI;
 
-
 public class GameManager : MonoBehaviour {
 
     // make game manager public static so can access this from other scripts

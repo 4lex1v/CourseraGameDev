@@ -28,7 +28,8 @@ GameObject:
   - component: {fileID: 114460314333532594}
   - component: {fileID: 82940119396670836}
   - component: {fileID: 114673116422701116}
-  m_Layer: 0
+  - component: {fileID: 95692200532738566}
+  m_Layer: 1
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -260,6 +261,23 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1394153577306068}
   m_Enabled: 1
+--- !u!95 &95692200532738566
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1394153577306068}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c246648865719404a9b63a572d3c1ace, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114060327127135764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -271,8 +289,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 593d4dac0a56d48dc96203b26863ebe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XSensitivity: 2
-  YSensitivity: 2
+  XSensitivity: 3
+  YSensitivity: 3
   clampVerticalRotation: 1
   MinimumX: -90
   MaximumX: 90
@@ -327,7 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0306d65e155bb491cb8ddcc717a61a5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 10
   gravity: 9.81
 --- !u!114 &114673116422701116
 MonoBehaviour:
@@ -341,7 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1758505751848382, guid: 7d1aa81f945e748e98bbb33526713e81, type: 2}
-  power: 155
+  power: 210
   shootSFX: {fileID: 8300000, guid: c96ad3bbb7e994ae782d9a1f782e4d9b, type: 3}
 --- !u!114 &114805471728940228
 MonoBehaviour:

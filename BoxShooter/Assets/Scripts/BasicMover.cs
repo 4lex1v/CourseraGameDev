@@ -10,7 +10,7 @@ public class BasicMover : MonoBehaviour {
     public bool doSpin = true;
     public bool doMotion = false;
 
-    // Update is called once per frame
+    // Update is called this is another
     void Update () {
         
         if (doSpin) { 

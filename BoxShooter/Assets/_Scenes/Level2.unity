@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44168055, g: 0.48331887, b: 0.5314045, a: 1}
+  m_IndirectSpecularColor: {r: 0.21063507, g: 0.23012203, b: 0.252632, a: 1}
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -689,10 +689,11 @@ MonoBehaviour:
   score: 0
   canBeatLevel: 0
   beatLevelScore: 0
-  startTime: 15
+  startTime: 30
   mainScoreDisplay: {fileID: 1048117142}
   mainTimerDisplay: {fileID: 1509599894}
   gameOverScoreOutline: {fileID: 2107817414}
+  countDownUI: {fileID: 0}
   musicAudioSource: {fileID: 1210327628}
   gameIsOver: 0
   playAgainButtons: {fileID: 1693337709}
@@ -1046,26 +1047,6 @@ Prefab:
     - target: {fileID: 4170950634453422, guid: 898c71b6e5af345de82c7028c35a3394, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114569272986271720, guid: 898c71b6e5af345de82c7028c35a3394,
-        type: 2}
-      propertyPath: moveSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114060327127135764, guid: 898c71b6e5af345de82c7028c35a3394,
-        type: 2}
-      propertyPath: XSensitivity
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114060327127135764, guid: 898c71b6e5af345de82c7028c35a3394,
-        type: 2}
-      propertyPath: YSensitivity
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114673116422701116, guid: 898c71b6e5af345de82c7028c35a3394,
-        type: 2}
-      propertyPath: power
-      value: 210
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 898c71b6e5af345de82c7028c35a3394, type: 2}

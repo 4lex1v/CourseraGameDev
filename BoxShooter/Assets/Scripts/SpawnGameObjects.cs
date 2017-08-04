@@ -14,12 +14,17 @@ public class SpawnGameObjects : MonoBehaviour
     
     public GameObject[] spawnObjects;
     public GameObject bomberObject;
+    
+    public Material stdMaterial;
+    public Material alertMaterial;
+
+    private Skybox skybox;
 
     private float nextSpawnTime;
 
     // Count-down timer until the next bomber
     // TODO, NOTE :: Should we add some console logging to see the tracking?
-    private float bomberCDTimer = 2f;
+    private float bomberCDTimer = 5f;
     private GameObject activeBomber = null;
 
     // Use this for initialization
@@ -27,6 +32,8 @@ public class SpawnGameObjects : MonoBehaviour
     {
         // determine when to spawn the next object
         nextSpawnTime = Time.time+secondsBetweenSpawning;
+
+        skybox = GameObject.Find("Main Camera").GetComponent<Skybox>();
     }
   
     // Update is called once per frame
@@ -41,21 +48,27 @@ public class SpawnGameObjects : MonoBehaviour
         // if time to spawn a new game object
         if (Time.time  >= nextSpawnTime) {
             // Spawn the game object through function below
-    //        MakeThingToSpawn ();
+            MakeThingToSpawn ();
 
             // determine the next time to spawn the object
             nextSpawnTime = Time.time+secondsBetweenSpawning;
         }	
 
-        if (bomberCDTimer <= 0.0) {
-            activeBomber = CreateBomber();
+        // BOMBER SPAWN LOGIC
+        if (bomberCDTimer <= 0.0) { // Time to spawn a new Bomber
+            if (activeBomber == null) {
+                activeBomber = CreateBomber();
+
+                skybox.material = alertMaterial;
+                
+                activeBomber
+                    .GetComponent<Bomber>()
+                    .SetCallback(() => { activeBomber = null; skybox.material = stdMaterial; });
+            }
 
             bomberCDTimer = Random.Range(3.0f, 6.0f);
-            //Debug.Log("New Bomber CDT :: " + bomberCDTimer);
-        } else {
-            bomberCDTimer -= Time.deltaTime;
-            //Debug.Log("Bomber timer: " + bomberCDTimer);
         }
+        else { bomberCDTimer -= Time.deltaTime; }
 
     }
 

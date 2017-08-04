@@ -67,3 +67,5 @@ MonoBehaviour:
   - {fileID: 1749097235075168, guid: 809f926373d3149d69a69b4f16a9de74, type: 2}
   bomberObject: {fileID: 1450319271079422, guid: cd5b7a714e5c34386aad5cfff961b8a3,
     type: 2}
+  stdMaterial: {fileID: 2100000, guid: 1062169e58bcf4489ae5cc6dfabff7b2, type: 2}
+  alertMaterial: {fileID: 2100000, guid: 5c42951c276fd4224be7b75485a29f3d, type: 2}

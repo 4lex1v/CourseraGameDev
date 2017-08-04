@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,15 +11,18 @@ public class Bomber : MonoBehaviour {
     private Text countDownUIText;
     private float timeTillExplosion = 5f;
     
+    private Action callback;
+    
     // Use this for initialization
     void Start () {
         gm = GameManager.gm;
-
         gm.countDownUI.SetActive(true);
-
+        
         countDownUIText = gm.countDownUI.GetComponent<Text>();
         countDownUIText.text = timeTillExplosion.ToString();
     }
+
+    public void SetCallback(Action cb) { callback = cb; }
   
     // Update is called once per frame
     void Update () {
@@ -60,9 +62,8 @@ public class Bomber : MonoBehaviour {
             // destroy self
             Destroy (gameObject);
         }
-
-        
     }
- 
-        
+
+    void OnDestroy() { callback(); }
+    
 }

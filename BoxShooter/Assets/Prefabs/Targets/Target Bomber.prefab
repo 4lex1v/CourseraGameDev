@@ -207,8 +207,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 1848800915683904, guid: 6a292fa587eb4422d99cee84b3d2fe63,
     type: 2}
-  countDownUI: {fileID: 114660216868613056, guid: 20323a5f15ccc465dadc6e1b16889ba4,
-    type: 2}
 --- !u!135 &135855244770818468
 SphereCollider:
   m_ObjectHideFlags: 1
