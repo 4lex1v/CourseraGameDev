@@ -9,7 +9,7 @@ public class Bomber : MonoBehaviour {
     private GameManager gm;
     
     private Text countDownUIText;
-    private float timeTillExplosion = 5f;
+    private float timeTillExplosion = 7f;
     
     private Action callback;
     

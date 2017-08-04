@@ -24,7 +24,7 @@ public class SpawnGameObjects : MonoBehaviour
 
     // Count-down timer until the next bomber
     // TODO, NOTE :: Should we add some console logging to see the tracking?
-    private float bomberCDTimer = 5f;
+    private float bomberCDTimer = 8f;
     private GameObject activeBomber = null;
 
     // Use this for initialization
@@ -66,7 +66,7 @@ public class SpawnGameObjects : MonoBehaviour
                     .SetCallback(() => { activeBomber = null; skybox.material = stdMaterial; });
             }
 
-            bomberCDTimer = Random.Range(3.0f, 6.0f);
+            bomberCDTimer = Random.Range(5.0f, 10.0f);
         }
         else { bomberCDTimer -= Time.deltaTime; }
 

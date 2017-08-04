@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour {
 
     // public variables
     public int score = 0;
+    
+    protected int multiplier = 1;
     protected int hits = 0;
 
     public bool canBeatLevel = false;
@@ -18,6 +20,7 @@ public class GameManager : MonoBehaviour {
   
     public Text mainScoreDisplay;
     public Text mainTimerDisplay;
+    public Text multiplierBox;
 
     public GameObject gameOverScoreOutline;
 
@@ -80,6 +83,8 @@ public class GameManager : MonoBehaviour {
                 mainTimerDisplay.text = currentTime.ToString ("0.00");				
             }
         }
+
+        multiplierBox.text = "x" + multiplier;
     }
 
      public void EndGame() {
@@ -123,14 +128,17 @@ public class GameManager : MonoBehaviour {
     }
 
     // public function that can be called to update the score or time
-    public void targetHit (int scoreAmount, float timeAmount)
+    public void targetHit (int scoreAmount, float timeAmount, int mult)
     {
+        multiplier += mult;
+        if (mult != 0) { Invoke("DecreaseMultiplier", 5f); }
+        
         // increase the score by the scoreAmount and update the text UI
-        score += scoreAmount;
+        score += (scoreAmount * multiplier);
         mainScoreDisplay.text = score.ToString ();
     
         // increase the time by the timeAmount
-        currentTime += timeAmount;
+        currentTime += (timeAmount * multiplier);
     
         // don't let it go negative
         if (currentTime < 0)
@@ -139,6 +147,8 @@ public class GameManager : MonoBehaviour {
         // update the text UI
         mainTimerDisplay.text = currentTime.ToString ("0.00");
     }
+
+    void DecreaseMultiplier() { if (multiplier > 1) { multiplier -= 1; } }
 
     // public function that can be called to restart the game
     public void RestartGame ()
