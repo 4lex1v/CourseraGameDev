@@ -55,7 +55,7 @@ public class SpawnGameObjects : MonoBehaviour
         }	
 
         // BOMBER SPAWN LOGIC
-        if (bomberCDTimer <= 0.0) { // Time to spawn a new Bomber
+        if (bomberCDTimer <= 0.0 && bomberObject) { // Time to spawn a new Bomber, specific for the second level
             if (activeBomber == null) {
                 activeBomber = CreateBomber();
 

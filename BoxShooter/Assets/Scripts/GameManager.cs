@@ -45,15 +45,14 @@ public class GameManager : MonoBehaviour {
 
         // set the current time to the startTime specified
         currentTime = startTime;
-
-        if (countDownUI == null) {
-            countDownUI = GameObject.Find("Explosion CDT");
-            countDownUI.SetActive(false);
-        }
+        
+        // This is Level2 specific logic
+        // TODO :: Think on how this should be properly managed
+        countDownUI = GameObject.Find("Explosion CDT");
+        if (countDownUI != null) { countDownUI.SetActive(false); }
 
         // get a reference to the GameManager component for use by other scripts
-        if (gm == null) 
-            gm = this.gameObject.GetComponent<GameManager>();
+        if (gm == null) gm = this.gameObject.GetComponent<GameManager>();
 
         // init scoreboard to 0
         mainScoreDisplay.text = "0";
@@ -84,7 +83,8 @@ public class GameManager : MonoBehaviour {
             }
         }
 
-        multiplierBox.text = "x" + multiplier;
+
+        if (multiplierBox) multiplierBox.text = "x" + multiplier;
     }
 
      public void EndGame() {
