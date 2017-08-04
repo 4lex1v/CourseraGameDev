@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23053572879762910}
   - component: {fileID: 95705953654315652}
   - component: {fileID: 114422562806551836}
-  - component: {fileID: 114569804855749298}
+  - component: {fileID: 114866846204154404}
   m_Layer: 0
   m_Name: Target Bomber
   m_TagString: Untagged
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   way: 1
---- !u!114 &114569804855749298
+--- !u!114 &114866846204154404
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -202,12 +202,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1450319271079422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20a926d2dbaf347e29cb9c7dc7bf85da, type: 3}
+  m_Script: {fileID: 11500000, guid: c199ecba44f534aacb528028ada6b5bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreAmount: 0
-  timeAmount: 0
   explosionPrefab: {fileID: 1848800915683904, guid: 6a292fa587eb4422d99cee84b3d2fe63,
+    type: 2}
+  countDownUI: {fileID: 114660216868613056, guid: 20323a5f15ccc465dadc6e1b16889ba4,
     type: 2}
 --- !u!135 &135855244770818468
 SphereCollider:
