@@ -88,7 +88,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   taken: 0
-  explosion: {fileID: 0}
+  explosion: {fileID: 1721776859710822, guid: f5a850ffcc1ba4f37a462153855edcaf, type: 2}
 --- !u!212 &212728261942310724
 SpriteRenderer:
   m_ObjectHideFlags: 1
