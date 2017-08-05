@@ -151,6 +151,8 @@ public class CharacterController2D : MonoBehaviour {
         // play the jump sound
         PlaySound(jumpSFX);
     }
+
+    public void EnemyBounce() { DoJump(); }
     
     // Checking to see if the sprite should be flipped
     // this is done in LateUpdate since the Animator may override the localScale

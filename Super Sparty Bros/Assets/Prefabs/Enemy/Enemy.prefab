@@ -58,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1401174041748370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.11, y: 2.12663, z: 0}
   m_LocalScale: {x: 1.1711869, y: 1.1467314, z: 1}
   m_Children:
   - {fileID: 4753494126900610}
@@ -309,13 +309,12 @@ MonoBehaviour:
   stunnedLayer: StunnedEnemy
   playerLayer: Player
   isStunned: 0
-  myWaypoints:
-  - {fileID: 0}
-  - {fileID: 0}
+  myWaypoints: []
   waitAtWaypointTime: 1
   loopWaypoints: 1
   stunnedSFX: {fileID: 8300000, guid: ff21dcef4b564469ea57b8cd985e2506, type: 3}
   attackSFX: {fileID: 8300000, guid: ff93f397b9418463d9eee538eeab8061, type: 3}
+  _myWaypointIndex: 0
 --- !u!212 &212952522656642372
 SpriteRenderer:
   m_ObjectHideFlags: 1
