@@ -564,8 +564,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd8490c653a54b49b89f69f6539efb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelAfterVictory: Leve1
-  levelAfterGameOver: Leve1
+  levelAfterVictory: GameWin
+  levelAfterGameOver: GameLose
   score: 0
   highscore: 0
   startLives: 3
